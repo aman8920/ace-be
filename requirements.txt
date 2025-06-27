@@ -1,0 +1,16 @@
+aiosqlite
+asyncpg
+bcrypt
+fastapi
+fastapi-login
+gunicorn
+httpx
+loguru
+openpyxl
+orjson
+pandas
+passlib
+python-multipart
+tortoise-orm
+uvicorn
+watchfiles
