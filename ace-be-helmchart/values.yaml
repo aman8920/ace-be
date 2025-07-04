@@ -26,7 +26,8 @@ serviceAccount:
   # Automatically mount a ServiceAccount's API credentials?
   automount: true
   # Annotations to add to the service account
-  annotations: {}
+  annotations:
+    azure.workload.identity/client-id: <client-id-of-user-assigned-managed-identity>
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
   name: "ace-be-serviceaacount"
@@ -124,9 +125,10 @@ affinity: {}
 
 
 csi:
-  name: azure-secrets-store
+  name: azure-kv-provider
   keyvaultName: my-keyvault
   tenantId: <your-tenant-id>
+  clientId: <your-managed-identity-client-id>   # required for federated workload identity
   secretKeys:
     username: postgres-username
     password: postgres-password
