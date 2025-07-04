@@ -20,7 +20,7 @@ PG_USERNAME = get_secret("POSTGRES_USER", "postgres")
 PG_PASSWORD = get_secret("POSTGRES_PASSWORD", "postgres")
 PG_HOST = get_secret("POSTGRES_HOST", "localhost")
 PG_PORT = int(get_secret("POSTGRES_PORT", 5432))
-PG_DATABASE = get_secret("POSTGRES_DB", "postgres")
+PG_DATABASE = get_secret("POSTGRES_DB", "postgres1")
 
 DB_URI = f"postgres://{PG_USERNAME}:{PG_PASSWORD}@{PG_HOST}:{PG_PORT}/{PG_DATABASE}"
 DB_MODELS = ["kenvas.models.db.user", "kenvas.models.db.planogram"]
